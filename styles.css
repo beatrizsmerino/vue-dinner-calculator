@@ -6,8 +6,10 @@ body {
 }
 
 h1 {
+    margin-top: 40px;
     text-align: center;
-    margin-top: 40px
+    font-size: 3rem;
+    color: lightblue;
 }
 
 /* Table */
@@ -15,16 +17,11 @@ h1 {
 table {
     margin: 25px auto;
     border-collapse: collapse;
-    border: 1px solid #eee;
-    border-bottom: 2px solid #42b883;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1),
-        0px 10px 20px rgba(0, 0, 0, 0.05),
-        0px 20px 20px rgba(0, 0, 0, 0.05),
-        0px 30px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
 }
 
 table tr:hover {
-    background: #f4f4f4;
+    background-color: lightblue;
 }
 
 table tr:hover td {
@@ -32,20 +29,46 @@ table tr:hover td {
 }
 
 table td {
-    color: #999;
-    border: 1px solid #eee;
     padding: 12px 35px;
+    font-size: 1.2rem;
+    color: #999;
     border-collapse: collapse;
+    border: 1px solid #ccc;
 }
 
 table tr td:nth-child(2) {
     text-align: right;
 }
 
-/* Buttons */
+.total{
+    background-color: rgba(173, 216, 230, 0.15);
+}
 
-button {
-    padding: 4px 7px;
-    border-radius: 1px;
+/* Buttons */
+.list-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-buttons__item:not(:last-child){
+    margin-right: 10px;
+}
+.button{
     outline: none;
+    border: none;
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    line-height: 100%;
+    color: #fff;
+    border: 2px solid #fff;
+    cursor: pointer; 
+}
+.button--add{
+    background-color: rgba(0, 128, 128, 0.70);
+}
+.button--remove{
+    background-color: rgba(255, 99, 71, 0.70);
 }
