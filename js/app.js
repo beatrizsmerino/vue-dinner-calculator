@@ -1,9 +1,12 @@
-var app = new Vue({
+const app = new Vue({
     el: '#app',
-    app: {
-
+    data: {
+        dinner: 100,
+        tip: 10,
+        people: 1,
+        taxes: 21
     },
     methods: {
         
-    },
+    }
 });

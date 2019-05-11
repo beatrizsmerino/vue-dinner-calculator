@@ -13,31 +13,31 @@
             <tbody>
                 <tr>
                     <td>Dinner</td>
-                    <td>100 €</td>
+                    <td>{{dinner}} €</td>
                     <td>
                         <div class="list-buttons">
-                            <button class="list-buttons__item button button--add">+</button>
-                            <button class="list-buttons__item button button--remove">-</button>
+                            <button @click="++dinner" class="list-buttons__item button button--add">+</button>
+                            <button @click="--dinner" class="list-buttons__item button button--remove">-</button>
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <td>Tip</td>
-                    <td>9 €</td>
+                    <td>{{tip}} %</td>
                     <td>
                         <div class="list-buttons">
-                            <button class="list-buttons__item button button--add">+</button>
-                            <button class="list-buttons__item button button--remove">-</button>
+                            <button @click="++tip" class="list-buttons__item button button--add">+</button>
+                            <button @click="--tip" class="list-buttons__item button button--remove">-</button>
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <td>People</td>
-                    <td>2</td>
+                    <td>{{people}}</td>
                     <td>
                         <div class="list-buttons">
-                            <button class="list-buttons__item button button--add">+</button>
-                            <button class="list-buttons__item button button--remove">-</button>
+                            <button @click="++people" class="list-buttons__item button button--add">+</button>
+                            <button @click="--people" class="list-buttons__item button button--remove">-</button>
                         </div>
                     </td>
                 </tr>
