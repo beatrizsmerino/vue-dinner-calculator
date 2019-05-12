@@ -1,0 +1,85 @@
+[v-cloak] {
+    display: none;
+}
+
+/* General */
+
+body {
+    color: #999;
+    font-family: 'Arial';
+}
+
+h1 {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 3rem;
+    color: lightblue;
+}
+
+/* Table */
+
+table {
+    margin: 25px auto;
+    border-collapse: collapse;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+table tr:hover {
+    background-color: rgba(173, 216, 230, 0.50);
+}
+
+table tr:hover td {
+    color: #555;
+}
+
+table td {
+    padding: 12px 35px;
+    font-size: 1.2rem;
+    color: #999;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+table tr td:nth-child(2) {
+    text-align: right;
+}
+
+.total {
+    background-color: rgba(173, 216, 230, 0.15);
+}
+.formula{
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* Buttons */
+.list-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-buttons__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.button {
+    outline: none;
+    border: none;
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    line-height: 100%;
+    color: #fff;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+.button--add {
+    background-color: rgba(0, 128, 128, 0.70);
+}
+
+.button--remove {
+    background-color: rgba(255, 99, 71, 0.70);
+}
