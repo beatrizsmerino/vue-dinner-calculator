@@ -16,8 +16,8 @@
                     <td>{{dinner}} €</td>
                     <td>
                         <div class="list-buttons">
-                            <button @click="++dinner" class="list-buttons__item button button--add">+</button>
-                            <button @click="--dinner" class="list-buttons__item button button--remove">-</button>
+                            <button @click="increment('dinner')" class="list-buttons__item button button--add">+</button>
+                            <button @click="decrement('dinner')" class="list-buttons__item button button--remove">-</button>
                         </div>
                     </td>
                 </tr>
@@ -26,8 +26,8 @@
                     <td>{{tip}} %</td>
                     <td>
                         <div class="list-buttons">
-                            <button @click="++tip" class="list-buttons__item button button--add">+</button>
-                            <button @click="--tip" class="list-buttons__item button button--remove">-</button>
+                            <button @click="increment('tip')" class="list-buttons__item button button--add">+</button>
+                            <button @click="decrement('tip')" class="list-buttons__item button button--remove">-</button>
                         </div>
                     </td>
                 </tr>
@@ -36,8 +36,8 @@
                     <td>{{people}}</td>
                     <td>
                         <div class="list-buttons">
-                            <button @click="++people" class="list-buttons__item button button--add">+</button>
-                            <button @click="--people" class="list-buttons__item button button--remove">-</button>
+                            <button @click="increment('people')" class="list-buttons__item button button--add">+</button>
+                            <button @click="decrement('people')" class="list-buttons__item button button--remove">-</button>
                         </div>
                     </td>
                 </tr>

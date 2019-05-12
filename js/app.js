@@ -7,6 +7,11 @@ const app = new Vue({
         taxes: 21
     },
     methods: {
-        
-    }
+        increment(key) {
+            this[key]++;
+        },
+        decrement(key) {
+            this[key]--; 
+        }
+    },
 });
