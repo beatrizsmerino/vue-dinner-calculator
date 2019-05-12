@@ -47,6 +47,10 @@ table tr td:nth-child(2) {
 .total {
     background-color: rgba(173, 216, 230, 0.15);
 }
+.formula{
+    font-size: 0.9rem;
+    color: #ccc;
+}
 
 /* Buttons */
 .list-buttons {
