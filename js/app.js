@@ -11,7 +11,10 @@ const app = new Vue({
             this[key]++;
         },
         decrement(key) {
-            this[key]--; 
+            if(this[key] > 1 ) {
+                this[key]--; 
+            }
+        },
         }
     },
 });
