@@ -1,3 +1,7 @@
+[v-cloak] {
+    display: none;
+}
+
 /* General */
 
 body {
@@ -21,7 +25,7 @@ table {
 }
 
 table tr:hover {
-    background-color: lightblue;
+    background-color: rgba(173, 216, 230, 0.50);
 }
 
 table tr:hover td {
@@ -40,21 +44,26 @@ table tr td:nth-child(2) {
     text-align: right;
 }
 
-.total{
+.total {
     background-color: rgba(173, 216, 230, 0.15);
+}
+.formula{
+    font-size: 0.9rem;
+    color: #ccc;
 }
 
 /* Buttons */
-.list-buttons{
+.list-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.list-buttons__item:not(:last-child){
+.list-buttons__item:not(:last-child) {
     margin-right: 10px;
 }
-.button{
+
+.button {
     outline: none;
     border: none;
     appearance: none;
@@ -64,11 +73,13 @@ table tr td:nth-child(2) {
     line-height: 100%;
     color: #fff;
     border: 2px solid #fff;
-    cursor: pointer; 
+    cursor: pointer;
 }
-.button--add{
+
+.button--add {
     background-color: rgba(0, 128, 128, 0.70);
 }
-.button--remove{
+
+.button--remove {
     background-color: rgba(255, 99, 71, 0.70);
 }
