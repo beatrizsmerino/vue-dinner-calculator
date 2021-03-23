@@ -5,10 +5,10 @@
 # Vue Dinner Calculator
 ### Vue Dinner Calculator is an application that calculates the cost of a dinner according to *the price of dinner per person*, *the number of people* and *tips*.
 
-![Image of App Vue Dinner Calculator](https://github.com/beatrizsmerino/vue-dinner-calculator/blob/feature/documentation/documentation/images/vue-dinner-calculator.png)
+![Image of App Vue Dinner Calculator](https://github.com/beatrizsmerino/vue-dinner-calculator/blob/master/README/images/vue-dinner-calculator.png)
 
 ## Development interface
-![Vue logo](https://github.com/beatrizsmerino/vue-dinner-calculator/blob/feature/documentation/documentation/images/vue-logo.png)
+![Vue logo](https://github.com/beatrizsmerino/vue-dinner-calculator/blob/master/README/images/vue-js-2.jpg)
 
 Is developed with **[vue.js](https://vuejs.org/)** a Javascript framework. This project has no npm dependencies.
 
