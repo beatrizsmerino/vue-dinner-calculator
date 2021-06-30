@@ -1,0 +1,10 @@
+<svg width="0" height="0" class="hidden">
+	<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="minus">
+		<title>minus</title>
+		<path d="M0 13v6a1 1 0 001 1h30a1 1 0 001-1v-6a1 1 0 00-1-1H1a1 1 0 00-1 1z"></path>
+	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="plus">
+		<title>plus</title>
+		<path d="M31 12H20V1a1 1 0 00-1-1h-6a1 1 0 00-1 1v11H1a1 1 0 00-1 1v6a1 1 0 001 1h11v11a1 1 0 001 1h6a1 1 0 001-1V20h11a1 1 0 001-1v-6a1 1 0 00-1-1z"></path>
+	</symbol>
+</svg>
