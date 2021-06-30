@@ -1,67 +1,113 @@
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Dinner calculator</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+	<head>
+		<meta charset="UTF-8" />
+		<title>
+			Dinner calculator
+		</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
 
-<body>
-    <h1>Dinner calculator</h1>
-    <div id="app" v-cloak>
-        <table>
-            <tbody>
-                <tr>
-                    <td>Dinner</td>
-                    <td>{{dinner}} €</td>
-                    <td>
-                        <div class="list-buttons">
-                            <button @click="increment('dinner')" class="list-buttons__item button button--add">+</button>
-                            <button @click="decrement('dinner')" class="list-buttons__item button button--remove">-</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Tip</td>
-                    <td>{{tip}} %</td>
-                    <td>
-                        <div class="list-buttons">
-                            <button @click="increment('tip')" class="list-buttons__item button button--add">+</button>
-                            <button @click="decrement('tip')" class="list-buttons__item button button--remove">-</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>People</td>
-                    <td>{{people}}</td>
-                    <td>
-                        <div class="list-buttons">
-                            <button @click="increment('people')" class="list-buttons__item button button--add">+</button>
-                            <button @click="decrement('people')" class="list-buttons__item button button--remove">-</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="total">
-                    <td>Total with taxes (21%)</td>
-                    <td>{{ totalTaxes() }} €</td>
-                    <td class="formula">( ( taxes * dinner ) / 100 ) + dinner</td>
-                </tr>
-                <tr class="total">
-                    <td>Total with tip</td>
-                    <td>{{ totalTip() }} €</td>
-                    <td class="formula">Total with taxes + Total with tip</td>
-                </tr>
-                <tr class="total">
-                    <td>Total per person</td>
-                    <td>{{ totalPerson() }} €</td>
-                    <td class="formula">( Total with taxes + Total with tip ) * person</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+	<body>
+		<h1>
+			Dinner calculator
+		</h1>
+		<div id="app" v-cloak>
+			<table>
+				<tbody>
+					<tr>
+						<td>
+							Dinner
+						</td>
+						<td>
+							{{ dinner }} €
+						</td>
+						<td>
+							<div class="list-buttons">
+								<button @click="increment('dinner')" class="list-buttons__item button button--add">
+									+
+								</button>
+								<button @click="decrement('dinner')" class="list-buttons__item button button--remove">
+									-
+								</button>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Tip
+						</td>
+						<td>
+							{{ tip }} %
+						</td>
+						<td>
+							<div class="list-buttons">
+								<button @click="increment('tip')" class="list-buttons__item button button--add">
+									+
+								</button>
+								<button @click="decrement('tip')" class="list-buttons__item button button--remove">
+									-
+								</button>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							People
+						</td>
+						<td>
+							{{ people }}
+						</td>
+						<td>
+							<div class="list-buttons">
+								<button @click="increment('people')" class="list-buttons__item button button--add">
+									+
+								</button>
+								<button @click="decrement('people')" class="list-buttons__item button button--remove">
+									-
+								</button>
+							</div>
+						</td>
+					</tr>
+					<tr class="total">
+						<td>
+							Total with taxes (21%)
+						</td>
+						<td>
+							{{ totalTaxes() }} €
+						</td>
+						<td class="formula">
+							( ( taxes * dinner ) / 100 ) + dinner
+						</td>
+					</tr>
+					<tr class="total">
+						<td>
+							Total with tip
+						</td>
+						<td>
+							{{ totalTip() }} €
+						</td>
+						<td class="formula">
+							Total with taxes + Total with tip
+						</td>
+					</tr>
+					<tr class="total">
+						<td>
+							Total per person
+						</td>
+						<td>
+							{{ totalPerson() }} €
+						</td>
+						<td class="formula">
+							( Total with taxes + Total with tip ) * person
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 
-    <script src="js/vue.js"></script>
-    <script src="js/app.js"></script>
-</body>
+		<script src="js/vue.js"></script>
+		<script src="js/app.js"></script>
+	</body>
 
 </html>
