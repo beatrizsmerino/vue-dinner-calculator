@@ -66,11 +66,11 @@ The scripts are loaded in the HTML like this:
   
 ### Formula
 
-- Total with taxes
+- Total with taxes (set to 21%)
     ```javascript
     totalWithTaxes = priceOfDinner + (priceOfDinner * taxRate) / 100
     ```
-- Total with tip
+- Total with tip (defaults to 10%)
     ```javascript
     tip = priceOfDinner + (priceOfDinner * tipRate) / 100
     totalWithTip = totalTaxes + tip
