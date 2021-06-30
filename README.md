@@ -7,6 +7,8 @@
 ![GitHub watchers](https://img.shields.io/github/watchers/beatrizsmerino/vue-dinner-calculator)
 ![GitHub last commit](https://img.shields.io/github/last-commit/beatrizsmerino/vue-dinner-calculator)
 
+[![vue - 2](https://img.shields.io/badge/vue-2-2ea44f?logo=vue.js)](vuejs.org/)
+
 ## Preview
 
 ![Vue Dinner Calculator app screenshot](/docs/images/vue-dinner-calculator.png "Vue Dinner Calculator app screenshot")
@@ -17,15 +19,19 @@
 
 Is developed with [vue.js](https://vuejs.org/), a Javascript framework. This project has no need to run NPM CLI.
 
-> At the core of Vue.js is a system that enables us to declaratively render data to the DOM using straightforward template syntax. Render a string template so the data and the DOM are linked, and everything is reactive. - [Vue](https://vuejs.org/v2/guide/)
+From the [Vue 2 guide](https://vuejs.org/v2/guide/):
+
+> At the core of Vue.js is a system that enables us to declaratively render data to the DOM using straightforward template syntax. Render a string template so the data and the DOM are linked, and everything is reactive.
 
 ## Content
 
-**It is composed of 3 files:**
+This project has 3 files:
 
 - [index.html](/index.html) [HTML-based template syntax](https://vuejs.org/v2/guide/syntax.html). Structure html with interpolations, bind attributes... This file include below the framework Vue and a file with the application development.
 - [vue.js](/js/vue.js) [Download Framework Vue.js v2.6.10](https://github.com/vuejs/vue/archive/v2.6.10.zip). Development version, includes helpful console warnings.
 - [app.js](/js/app.js) [The Vue instance](https://vuejs.org/v2/guide/instance.html). Development of the code with data and methods to create your desired behavior.
+
+The scripts are loaded in the HTML like this:
 
 ```html
 <script src="js/vue.js"></script>
@@ -34,16 +40,14 @@ Is developed with [vue.js](https://vuejs.org/), a Javascript framework. This pro
 
 ## How it works
 
-### Requirements and functionalities
-
-#### Vue data
+### Vue data
 
 - `priceOfDinner`
 - `numOfPersons`
 - `tips`
 - `taxes`  
   
-#### Vue methods
+### Vue methods
 
 - `increment()`
 - `decrement()`
@@ -51,7 +55,7 @@ Is developed with [vue.js](https://vuejs.org/), a Javascript framework. This pro
 - `totalTip()`
 - `totalPerson()` 
   
-#### Formula
+### Formula
 
 - Total with taxes (21%)
     ```javascript
@@ -66,6 +70,6 @@ Is developed with [vue.js](https://vuejs.org/), a Javascript framework. This pro
     totalPerson = (totalTaxes + totalTip) * numOfPersons;
     ```
 
-## Continue...
+## What to do next
 
-Don't stop learning. It is a basic example to start learning Vue. :wink:
+Don't stop learning. This is a basic example to start learning Vue. :wink:
