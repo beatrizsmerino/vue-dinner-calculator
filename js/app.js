@@ -16,24 +16,22 @@ const app = new Vue({
             }
         },
         totalTaxes() {
-            let totalTaxes = ((this.taxes * this.dinner) / 100) + this.dinner;
-            let result = totalTaxes;
+            const totalWithTaxes = (this.taxes * this.dinner) / 100) + this.dinner;
             
-            return result.toFixed(2);
+            return totalWithTaxes.toFixed(2);
         },
         totalTip() {
-            let totalTaxes = ((this.taxes * this.dinner) / 100) + this.dinner;
-            let totalTip = ((this.tip * this.dinner) / 100) + this.dinner;
-            let result = totalTaxes + totalTip;
+            const totalWithTaxes = (this.taxes * this.dinner) / 100) + this.dinner;
+            const totalWithTip = totalWithTaxes * this.tip;
             
-            return result.toFixed(2);
+            return totalWithTip.toFixed(2);
         },
         totalPerson() {
-            let totalTaxes = ((this.taxes * this.dinner) / 100) + this.dinner;
-            let totalTip = ((this.tip * this.dinner) / 100) + this.dinner;
-            let result = (totalTaxes + totalTip) / this.people;
+            const totalWithTaxes = (this.taxes * this.dinner) / 100) + this.dinner;
+            const totalWithTip = totalWithTaxes * this.tip;
+            let perPerson = totalWithTip / this.people;
             
-            return result.toFixed(2);
+            return perPerson.toFixed(2);
         }
     },
 });
