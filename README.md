@@ -1,5 +1,5 @@
 # Vue Dinner Calculator
-> Calculates the cost of a dinner according to the price of dinner per person*, the number of people and tips
+> Calculate the cost of a dinner using price of dinner per person, the number of people, and tips
 
 ![GitHub issues](https://img.shields.io/github/issues/beatrizsmerino/vue-dinner-calculator)
 ![GitHub forks](https://img.shields.io/github/forks/beatrizsmerino/vue-dinner-calculator)
