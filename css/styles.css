@@ -1,10 +1,13 @@
-[v-cloak] {
-	display: none;
-}
+/*
+ * SETTINGS
+ * variables
+ * =================================================
+ */
 
 :root {
-	--color-brand-1: 44, 62, 80;
-	--color-brand-2: 52, 152, 219;
+	--color-brand-0: 13, 50, 77;
+	--color-brand-1: 43, 88, 118;
+	--color-brand-2: 78, 67, 118;
 	--color-brand-3: 173, 216, 230;
 	--color-black: 0, 0, 0;
 	--color-dark: 85, 85, 85;
@@ -15,57 +18,148 @@
 	--color-success: 0, 128, 128;
 }
 
-/* General */
+/*
+ * BASE
+ * reset
+ * =================================================
+ */
 
-body {
-	color: rgb(var(--color-gray));
-	font-family: "Arial";
+[v-cloak] {
+	display: none;
 }
 
-h1 {
-	margin-top: 40px;
+/*
+ * BASE
+ * general
+ * =================================================
+ */
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	margin: 0;
+	padding: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Arial";
+	color: rgb(var(--color-gray));
+	background: rgb(var(--color-brand-1)); /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to bottom,
+		rgb(var(--color-brand-0)),
+		rgb(var(--color-brand-1)),
+		rgb(var(--color-brand-2))
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to bottom,
+		rgb(var(--color-brand-0)),
+		rgb(var(--color-brand-1)),
+		rgb(var(--color-brand-2))
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/*
+ * COMPONENTS
+ * icon
+ * =================================================
+ */
+
+.sprites svg {
+	width: 0;
+	height: 0;
+	visibility: hidden;
+	position: absolute;
+}
+
+.icon {
+	display: inline-block;
+}
+
+.icon__svg {
+	width: 1.8rem;
+	height: 1.8rem;
+}
+
+.icon--white {
+	fill: rgb(var(--color-white));
+}
+
+/*
+ * COMPONENTS
+ * title
+ * =================================================
+ */
+
+.title {
+	margin-top: 4rem;
+	font-family: "Permanent Marker", cursive;
 	text-align: center;
-	font-size: 3rem;
+	font-size: 6rem;
+	line-height: 100%;
 	color: rgb(var(--color-brand-3));
 }
 
-/* Table */
+/*
+ * COMPONENTS
+ * table
+ * =================================================
+ */
 
-table {
-	margin: 25px auto;
+.table {
+	margin: 2.5rem auto;
 	border-collapse: collapse;
-	box-shadow: 0px 5px 20px rgba(var(--color-black), 0.5);
+	box-shadow: 0 0.5rem 2rem rgba(var(--color-black), 0.5);
 }
 
-table tr:hover {
-	background-color: rgba(var(--color-brand-3), 0.5);
-}
-
-table tr:hover td {
-	color: rgb(var(--color-gray-dark));
-}
-
-table td {
-	padding: 12px 35px;
-	font-size: 1.2rem;
-	color: rgb(var(--color-gray));
+.table__th,
+.table__td {
+	padding: 1.2rem 2.5rem;
+	font-size: 1.8rem;
+	color: rgb(var(--color-white));
 	border-collapse: collapse;
-	border: 1px solid rgb(var(--color-light));
+	border: 0.1rem solid rgb(var(--color-brand-3));
 }
 
-table tr td:nth-child(2) {
+.table .table__th {
+	text-align: left;
+	font-weight: 600;
+	color: rgb(var(--color-white));
+}
+
+.table__td--numbers {
+	width: 10rem;
+	padding: 1.2rem;
+	font-family: "Oxygen Mono", monospace;
+}
+
+.table__td--formula {
+	font-size: 1.5rem;
+	font-weight: 400;
+	font-style: italic;
+}
+
+.table__row .table__td:nth-child(2) {
 	text-align: right;
 }
 
-.total {
-	background-color: rgba(var(--color-brand-3), 0.15);
-}
-.formula {
-	font-size: 0.9rem;
-	color: rgb(var(--color-light));
+.table__row:hover {
+	color: rgb(var(--color-black));
+	background-color: rgba(var(--color-black), 0.3);
 }
 
-/* Buttons */
+.table__row--calculate {
+	background-color: rgba(var(--color-brand-3), 0.1);
+}
+
+/*
+ * COMPONENTS
+ * button
+ * =================================================
+ */
+
 .list-buttons {
 	display: flex;
 	justify-content: center;
@@ -73,26 +167,35 @@ table tr td:nth-child(2) {
 }
 
 .list-buttons__item:not(:last-child) {
-	margin-right: 10px;
+	margin-right: 1rem;
 }
 
 .button {
 	outline: none;
 	border: none;
 	appearance: none;
-	width: 40px;
-	height: 40px;
-	font-size: 1.5rem;
+	width: 4rem;
+	height: 4rem;
+	font-size: 3rem;
 	line-height: 100%;
 	color: rgb(var(--color-white));
-	border: 2px solid rgb(var(--color-white));
+	border: 0.2rem solid rgb(var(--color-white));
+	border-radius: 50%;
 	cursor: pointer;
 }
 
 .button--add {
-	background-color: rgba(var(--color-success), 0.7);
+	background-color: rgba(var(--color-success), 0.6);
+}
+
+.button--add:hover {
+	background-color: rgb(var(--color-success));
 }
 
 .button--remove {
-	background-color: rgba(var(--color-error), 0.7);
+	background-color: rgba(var(--color-error), 0.6);
+}
+
+.button--remove:hover {
+	background-color: rgba(var(--color-error));
 }
