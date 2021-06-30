@@ -27,9 +27,9 @@ From the [Vue 2 guide](https://vuejs.org/v2/guide/):
 
 This project has 3 files:
 
-- [index.html](/index.html) [HTML-based template syntax](https://vuejs.org/v2/guide/syntax.html). Structure html with interpolations, bind attributes... This file include below the framework Vue and a file with the application development.
-- [vue.js](/js/vue.js) [Download Framework Vue.js v2.6.10](https://github.com/vuejs/vue/archive/v2.6.10.zip). Development version, includes helpful console warnings.
-- [app.js](/js/app.js) [The Vue instance](https://vuejs.org/v2/guide/instance.html). Development of the code with data and methods to create your desired behavior.
+- [index.html](/index.html) - see [HTML-based template syntax](https://vuejs.org/v2/guide/syntax.html). Structure html with interpolations, bind attributes... This file include below the framework Vue and a file with the application development.
+- [vue.js](/js/vue.js) - see [Download Framework Vue.js v2.6.10](https://github.com/vuejs/vue/archive/v2.6.10.zip). Development version, includes helpful console warnings.
+- [app.js](/js/app.js) - see [The Vue instance](https://vuejs.org/v2/guide/instance.html). Development of the code with data and methods to create your desired behavior.
 
 The scripts are loaded in the HTML like this:
 
