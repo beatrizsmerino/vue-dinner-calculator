@@ -11,13 +11,13 @@
 
 ## Preview
 
-![Vue Dinner Calculator app screenshot](/docs/images/vue-dinner-calculator.png "Vue Dinner Calculator app screenshot")
+[![Vue Dinner Calculator app screenshot](/docs/images/vue-dinner-calculator.png "Vue Dinner Calculator app screenshot")](https://beatrizsmerino.github.io/vue-dinner-calculator/)
 
 ## Development interface
 
-![Vue logo](/docs/images/vue-js-2.jpg)
+[![Vue logo](/docs/images/vue-js-2.jpg)](https://vuejs.org/)
 
-Is developed with [vue.js](https://vuejs.org/), a Javascript framework. This project has no need to run NPM CLI.
+Is developed with [Vue.js](https://vuejs.org/), a Javascript framework. This project has no need to run NPM CLI.
 
 From the [Vue 2 guide](https://vuejs.org/v2/guide/):
 
