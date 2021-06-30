@@ -9,6 +9,15 @@
 
 [![vue - 2](https://img.shields.io/badge/vue-2-2ea44f?logo=vue.js)](vuejs.org/)
 
+
+## Web app
+
+<div align="center">
+  
+[![View site - GH Pages](https://img.shields.io/badge/View_site-GH_Pages-2ea44f?style=for-the-badge)](https://beatrizsmerino.github.io.github.io/vue-dinner-calculator/)
+
+</div>
+
 ## Preview
 
 [![Vue Dinner Calculator app screenshot](/docs/images/vue-dinner-calculator.png "Vue Dinner Calculator app screenshot")](https://beatrizsmerino.github.io/vue-dinner-calculator/)
