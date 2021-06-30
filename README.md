@@ -59,15 +59,16 @@ The scripts are loaded in the HTML like this:
 
 - Total with taxes (21%)
     ```javascript
-    totalTaxes = ((taxes * priceOfDinner) / 100) + priceOfDinner
+    totalTaxes = priceOfDinner + (priceOfDinner * taxes) / 100
     ```
 - Total with tip
     ```javascript
-    totalTip = totalTaxes + (((tip * priceOfDinner) / 100) + priceOfDinner)
+    tip = priceOfDinner + (priceOfDinner * tip) / 100
+    totalWithTip = totalTaxes + tip
     ```
 - Total per person
     ```javascript
-    totalPerson = (totalTaxes + totalTip) * numOfPersons;
+    totalPerson = (totalTaxes + totalWithTip) * numOfPersons;
     ```
 
 ## What to do next
