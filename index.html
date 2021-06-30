@@ -24,7 +24,7 @@
 							Dinner
 						</th>
 						<td class="table__td table__td--numbers">
-							{{ dinner }} €
+							{{ dinner }}€
 						</td>
 						<td class="table__td">
 							<div class="list-buttons">
@@ -50,18 +50,18 @@
 							Tip
 						</th>
 						<td class="table__td table__td--numbers">
-							{{ tip }} %
+							{{ tips }}%
 						</td>
 						<td class="table__td">
 							<div class="list-buttons">
-								<button @click="increment('tip')" class="list-buttons__item button button--add">
+								<button @click="increment('tips')" class="list-buttons__item button button--add">
 									<i class="icon icon--white">
 										<svg class="icon__svg">
 											<use class="icon__use" xlink:href="#plus"></use>
 										</svg>
 									</i>
 								</button>
-								<button @click="decrement('tip')" class="list-buttons__item button button--remove">
+								<button @click="decrement('tips')" class="list-buttons__item button button--remove">
 									<i class="icon icon--white">
 										<svg class="icon__svg">
 											<use class="icon__use" xlink:href="#minus"></use>
@@ -99,35 +99,38 @@
 					</tr>
 					<tr class="table__row table__row--calculate">
 						<th class="table__th">
-							Total with taxes (21%)
+							Total per person<br>
+							with taxes (21%)
 						</th>
 						<td class="table__td table__td--numbers">
-							{{ totalTaxes() }} €
+							{{ totalTaxes() }}€
 						</td>
 						<td class="table__td table__td--formula">
-							( ( taxes * dinner ) / 100 ) + dinner
+							(dinner * (taxes% / 100)) + dinner
 						</td>
 					</tr>
 					<tr class="table__row table__row--calculate">
 						<th class="table__th">
-							Total with tip
+							Total all person<br>
+							with taxes (21%)
 						</th>
 						<td class="table__td table__td--numbers">
-							{{ totalTip() }} €
+							{{ totalPersons() }}€
 						</td>
 						<td class="table__td table__td--formula">
-							Total with taxes + Total with tip
+							total dinner with taxes * people
 						</td>
 					</tr>
 					<tr class="table__row table__row--calculate">
 						<th class="table__th">
-							Total per person
+							Total all person<br>
+							with tips
 						</th>
 						<td class="table__td table__td--numbers">
-							{{ totalPerson() }} €
+							{{ totalTips() }}€
 						</td>
 						<td class="table__td table__td--formula">
-							( Total with taxes + Total with tip ) * person
+							(total dinner * (tip% / 100)) + total dinner
 						</td>
 					</tr>
 				</tbody>

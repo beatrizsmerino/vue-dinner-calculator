@@ -41,7 +41,7 @@ const app = new Vue({
 	el: '#app',
 	data: {
 		dinner: 100,
-		tip: 10,
+		tips: 10,
 		people: 1,
 		taxes: 21
 	},
@@ -55,21 +55,19 @@ const app = new Vue({
 			}
 		},
 		totalTaxes() {
-			let totalTaxes = ((this.taxes * this.dinner) / 100) + this.dinner;
-			let result = totalTaxes;
-			return result.toFixed(2);
+			let result = (this.dinner * (this.taxes / 100)) + this.dinner;
+			result.toFixed(2);
+			return result;
 		},
-		totalTip() {
-			let totalTaxes = ((this.taxes * this.dinner) / 100) + this.dinner;
-			let totalTip = ((this.tip * this.dinner) / 100) + this.dinner;
-			let result = totalTaxes + totalTip;
-			return result.toFixed(2);
+		totalPersons() {
+			let result = this.totalTaxes() * this.people;
+			result.toFixed(2);
+			return result;
 		},
-		totalPerson() {
-			let totalTaxes = ((this.taxes * this.dinner) / 100) + this.dinner;
-			let totalTip = ((this.tip * this.dinner) / 100) + this.dinner;
-			let result = (totalTaxes + totalTip) * this.people;
-			return result.toFixed(2);
-		}
+		totalTips() {
+			let result = (this.totalPersons() * (this.tips / 100)) + this.totalPersons();
+			result.toFixed(2);
+			return result;
+		},
 	},
 });
