@@ -14,16 +14,16 @@
 
 Is developed with **[vue.js](https://vuejs.org/)** a Javascript framework. This project has no npm dependencies.
 
-> At the core of Vue.js is a system that enables us to declaratively render data to the DOM using straightforward template syntax. Render a string template so the data and the DOM are linked, and everything is reactive.
+> At the core of Vue.js is a system that enables us to declaratively render data to the DOM using straightforward template syntax. Render a string template so the data and the DOM are linked, and everything is reactive.  
 -[Vue](https://vuejs.org/v2/guide/)
 
 ## Content
 **It is composed of 3 files:**
-1. *vue.js*
+1. *vue.js*  
 [Download Framework Vue.js v2.6.10](https://github.com/vuejs/vue/archive/v2.6.10.zip). Development version, includes helpful console warnings.
-2. *index.html*
+2. *index.html*  
 [HTML-based template syntax](https://vuejs.org/v2/guide/syntax.html). Structure html with interpolations, bind attributes... This file include below the framework Vue and a file with the application development.
-3. *app.js*
+3. *app.js*  
 [The Vue instance](https://vuejs.org/v2/guide/instance.html). Development of the code with data and methods to create your desired behavior.
 
 ```html
@@ -38,15 +38,15 @@ Is developed with **[vue.js](https://vuejs.org/)** a Javascript framework. This 
 - priceOfDinner
 - numOfPersons
 - tips
-- taxes
-
+- taxes  
+  
 #### Vue methods
 - increment()
 - decrement()
 - totalTaxes()
 - totalTip()
-- totalPerson()
-
+- totalPerson()  
+  
 #### Formules
 - Total with taxes (21%)
 ```javascript
