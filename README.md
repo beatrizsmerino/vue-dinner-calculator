@@ -41,31 +41,31 @@ Is developed with **[vue.js](https://vuejs.org/)** a Javascript framework. This 
 
 #### Vue data
 
-- priceOfDinner
-- numOfPersons
+- price
+- persons
 - tips
-- taxes (21%)
+- taxes
 
 #### Vue methods
 
 - increment()
 - decrement()
 - totalTaxes()
-- totalAllPerson()
-- totalTip()
+- totalPersons()
+- totalTips()
 
 #### Formules
 
 - Total of the dinner per person with taxes
 
 ```javascript
-result = (priceOfDinner * (taxes% / 100)) + priceOfDinner
+result = (price * (taxes% / 100)) + price
 ```
 
 - Total of the dinner the all persons with taxes
 
 ```javascript
-result = totalTaxes * numOfPersons
+result = totalTaxes * persons;
 ```
 
 - Total of the dinner the all persons with taxes and tips

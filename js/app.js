@@ -40,9 +40,9 @@ function printSprites() {
 const app = new Vue({
 	el: '#app',
 	data: {
-		dinner: 100,
+		price: 100,
 		tips: 10,
-		people: 1,
+		persons: 1,
 		taxes: 21
 	},
 	methods: {
@@ -55,12 +55,12 @@ const app = new Vue({
 			}
 		},
 		totalTaxes() {
-			let result = (this.dinner * (this.taxes / 100)) + this.dinner;
+			let result = (this.price * (this.taxes / 100)) + this.price;
 			result.toFixed(2);
 			return result;
 		},
 		totalPersons() {
-			let result = this.totalTaxes() * this.people;
+			let result = this.totalTaxes() * this.persons;
 			result.toFixed(2);
 			return result;
 		},
