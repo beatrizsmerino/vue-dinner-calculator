@@ -56,17 +56,14 @@ const app = new Vue({
 		},
 		totalTaxes() {
 			let result = (this.price * (this.taxes / 100)) + this.price;
-			result.toFixed(2);
 			return result;
 		},
 		totalPersons() {
 			let result = this.totalTaxes() * this.persons;
-			result.toFixed(2);
 			return result;
 		},
 		totalTips() {
 			let result = (this.totalPersons() * (this.tips / 100)) + this.totalPersons();
-			result.toFixed(2);
 			return result;
 		},
 	},
