@@ -11,24 +11,18 @@ const app = new Vue({
             this[key]++;
         },
         decrement(key) {
-            if (this[key] > 1 ) {
-                this[key]--; 
+            if (this[key] > 1) {
+                this[key]--;
             }
         },
         totalTaxes() {
-            const totalWithTaxes = this.dinner * (1 + this.taxes);
-            
-            return totalWithTaxes.toFixed(2);
+            return this.dinner * (1 + this.taxes / 100);
         },
         totalTip() {
-            const totalWithTip = this.totalTaxes() * (1 + this.tip);
-            
-            return totalWithTip.toFixed(2);
+            return this.totalTaxes() * (1 + this.tip / 100);
         },
         totalPerson() {
-            const perPerson = this.totalTip() / this.people;
-            
-            return perPerson.toFixed(2);
+            return this.totalTip() / this.people;
         }
     },
 });
