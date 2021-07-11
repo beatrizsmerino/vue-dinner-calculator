@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Dinner calculator</title>
+
     <link rel="stylesheet" href="styles.css">
+
+    <script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+
+    <script defer src="js/app.js"></script>
 </head>
 
 <body>
@@ -13,7 +18,7 @@
             <tbody>
                 <tr>
                     <td>Dinner</td>
-                    <td>{{dinner}} €</td>
+                    <td>{{ dinner }} €</td>
                     <td>
                         <div class="list-buttons">
                             <button @click="increment('dinner')" class="list-buttons__item button button--add">+</button>
@@ -23,7 +28,7 @@
                 </tr>
                 <tr>
                     <td>Tip</td>
-                    <td>{{tip}} %</td>
+                    <td>{{ tip }} %</td>
                     <td>
                         <div class="list-buttons">
                             <button @click="increment('tip')" class="list-buttons__item button button--add">+</button>
@@ -33,7 +38,7 @@
                 </tr>
                 <tr>
                     <td>People</td>
-                    <td>{{people}}</td>
+                    <td>{{ people }}</td>
                     <td>
                         <div class="list-buttons">
                             <button @click="increment('people')" class="list-buttons__item button button--add">+</button>
@@ -43,25 +48,22 @@
                 </tr>
                 <tr class="total">
                     <td>Total with taxes ({{ taxes }}%)</td>
-                    <td>{{ totalTaxes() }} €</td>
+                    <td>{{ totalTaxes().toFixed(2) }} €</td>
                     <td class="formula">( ( taxes * dinner ) / 100 ) + dinner</td>
                 </tr>
                 <tr class="total">
                     <td>Total with tip</td>
-                    <td>{{ totalTip() }} €</td>
+                    <td>{{ totalTip().toFixed(2) }} €</td>
                     <td class="formula">Total with taxes + Total with tip</td>
                 </tr>
                 <tr class="total">
                     <td>Total per person</td>
-                    <td>{{ totalPerson() }} €</td>
+                    <td>{{ totalPerson().toFixed(2) }} €</td>
                     <td class="formula">( Total with taxes + Total with tip ) * person</td>
                 </tr>
             </tbody>
         </table>
     </div>
-
-    <script src="js/vue.js"></script>
-    <script src="js/app.js"></script>
 </body>
 
 </html>

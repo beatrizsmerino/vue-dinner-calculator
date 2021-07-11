@@ -1,65 +1,85 @@
+# Vue Dinner Calculator
+> Calculate the cost of a dinner using price of dinner per person, the number of people, and tips
+
 ![GitHub issues](https://img.shields.io/github/issues/beatrizsmerino/vue-dinner-calculator)
 ![GitHub forks](https://img.shields.io/github/forks/beatrizsmerino/vue-dinner-calculator)
 ![GitHub stars](https://img.shields.io/github/stars/beatrizsmerino/vue-dinner-calculator)
 ![GitHub watchers](https://img.shields.io/github/watchers/beatrizsmerino/vue-dinner-calculator)
 ![GitHub last commit](https://img.shields.io/github/last-commit/beatrizsmerino/vue-dinner-calculator)
 
-# Vue Dinner Calculator
-### Vue Dinner Calculator is an application that calculates the cost of a dinner according to *the price of dinner per person*, *the number of people* and *tips*.
+[![vue - 2](https://img.shields.io/badge/vue-2-2ea44f?logo=vue.js)](vuejs.org/)
 
-![Image of App Vue Dinner Calculator](https://github.com/beatrizsmerino/vue-dinner-calculator/blob/master/README/images/vue-dinner-calculator.png)
+
+## Web app
+
+<div align="center">
+  
+[![View site - GH Pages](https://img.shields.io/badge/View_site-GH_Pages-2ea44f?style=for-the-badge)](https://beatrizsmerino.github.io.github.io/vue-dinner-calculator/)
+
+</div>
+
+## Preview
+
+[![Vue Dinner Calculator app screenshot](/docs/images/vue-dinner-calculator.png "Vue Dinner Calculator app screenshot")](https://beatrizsmerino.github.io/vue-dinner-calculator/)
 
 ## Development interface
-![Vue logo](https://github.com/beatrizsmerino/vue-dinner-calculator/blob/master/README/images/vue-js-2.jpg)
 
-Is developed with **[vue.js](https://vuejs.org/)** a Javascript framework. This project has no npm dependencies.
+[![Vue logo](/docs/images/vue-js-2.jpg)](https://vuejs.org/)
 
-> At the core of Vue.js is a system that enables us to declaratively render data to the DOM using straightforward template syntax. Render a string template so the data and the DOM are linked, and everything is reactive.  
--[Vue](https://vuejs.org/v2/guide/)
+Is developed with [Vue.js](https://vuejs.org/), a Javascript framework. This project has no need to run NPM CLI.
+
+From the [Vue 2 guide](https://vuejs.org/v2/guide/):
+
+> At the core of Vue.js is a system that enables us to declaratively render data to the DOM using straightforward template syntax. Render a string template so the data and the DOM are linked, and everything is reactive.
 
 ## Content
-**It is composed of 3 files:**
-1. *vue.js*  
-[Download Framework Vue.js v2.6.10](https://github.com/vuejs/vue/archive/v2.6.10.zip). Development version, includes helpful console warnings.
-2. *index.html*  
-[HTML-based template syntax](https://vuejs.org/v2/guide/syntax.html). Structure html with interpolations, bind attributes... This file include below the framework Vue and a file with the application development.
-3. *app.js*  
-[The Vue instance](https://vuejs.org/v2/guide/instance.html). Development of the code with data and methods to create your desired behavior.
+
+This project has 3 files:
+
+- [index.html](/index.html) - see [HTML-based template syntax](https://vuejs.org/v2/guide/syntax.html). Structure html with interpolations, bind attributes... This file include below the framework Vue and a file with the application development.
+- [vue.js](/js/vue.js) - see [Download Framework Vue.js v2.6.10](https://github.com/vuejs/vue/archive/v2.6.10.zip). Development version, includes helpful console warnings.
+- [app.js](/js/app.js) - see [The Vue instance](https://vuejs.org/v2/guide/instance.html). Development of the code with data and methods to create your desired behavior.
+
+The scripts are loaded in the HTML like this:
 
 ```html
-<script src="js/vue.js"></script>
-<script src="js/app.js"></script>  
+<script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+<script defer src="js/app.js"></script>
 ```
 
-## How work
-### Requirements and functionalities
+## How it works
 
-#### Vue data
-- priceOfDinner
-- numOfPersons
-- tips
-- taxes  
+### Vue data
+
+- `priceOfDinner`
+- `numOfPersons`
+- `tips`
+- `taxes`  
   
-#### Vue methods
-- increment()
-- decrement()
-- totalTaxes()
-- totalTip()
-- totalPerson()  
+### Vue methods
+
+- `increment()`
+- `decrement()`
+- `totalTaxes()`
+- `totalTip()`
+- `totalPerson()` 
   
-#### Formules
-- Total with taxes (21%)
-```javascript
-totalTaxes = ((taxes * priceOfDinner) / 100) + priceOfDinner
-```
-- Total with tip
-```javascript
-totalTip = totalTaxes + (((tip * priceOfDinner) / 100) + priceOfDinner)
-```
+### Formula
+
+- Total with taxes (set to 21%)
+    ```javascript
+    totalWithTaxes = priceOfDinner + (priceOfDinner * taxRate) / 100
+    ```
+- Total with tip (defaults to 10%)
+    ```javascript
+    tip = priceOfDinner + (priceOfDinner * tipRate) / 100
+    totalWithTip = totalTaxes + tip
+    ```
 - Total per person
-```javascript
-totalPerson = (totalTaxes + totalTip) * numOfPersons;
-```
+    ```javascript
+    totalPerPerson = (totalWithTaxes + totalWithTip) / numOfPeople;
+    ```
 
-## Continue...
-> Don't stop learn. It is a basic example to start learning vue. :wink:
+## What to do next
+
+Don't stop learning. This is a basic example to start learning Vue. :wink:
