@@ -8,7 +8,7 @@
 
 ### Vue Dinner Calculator is an application that calculates the cost of a dinner according to _the price of dinner per person_, _the number of people_ and _tips_.
 
-![Image of App Vue Dinner Calculator](README/images/vue-dinner-calculator.png)
+![Image of App Vue Dinner Calculator](README/images/vue-dinner-calculator.jpg)
 
 ## Development interface
 
