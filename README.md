@@ -31,7 +31,7 @@ Is developed with **[vue.js](https://vuejs.org/)** a Javascript framework. This 
    [The Vue instance](https://vuejs.org/v2/guide/instance.html). Development of the code with data and methods to create your desired behavior.
 
 ```html
-<script src="js/vue.js"></script>
+<script src="js/vue-2.6.10.js"></script>
 <script src="js/app.js"></script>
 ```
 
