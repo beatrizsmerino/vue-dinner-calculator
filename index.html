@@ -1,67 +1,173 @@
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Dinner calculator</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+	<head>
+		<meta charset="UTF-8" />
+		<title>
+			Dinner calculator
+		</title>
+		<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+		<link
+			href="https://fonts.googleapis.com/css2?family=Oxygen+Mono&family=Source+Code+Pro:wght@400;600&display=swap"
+			rel="stylesheet">
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
 
-<body>
-    <h1>Dinner calculator</h1>
-    <div id="app" v-cloak>
-        <table>
-            <tbody>
-                <tr>
-                    <td>Dinner</td>
-                    <td>{{dinner}} €</td>
-                    <td>
-                        <div class="list-buttons">
-                            <button @click="increment('dinner')" class="list-buttons__item button button--add">+</button>
-                            <button @click="decrement('dinner')" class="list-buttons__item button button--remove">-</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Tip</td>
-                    <td>{{tip}} %</td>
-                    <td>
-                        <div class="list-buttons">
-                            <button @click="increment('tip')" class="list-buttons__item button button--add">+</button>
-                            <button @click="decrement('tip')" class="list-buttons__item button button--remove">-</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>People</td>
-                    <td>{{people}}</td>
-                    <td>
-                        <div class="list-buttons">
-                            <button @click="increment('people')" class="list-buttons__item button button--add">+</button>
-                            <button @click="decrement('people')" class="list-buttons__item button button--remove">-</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="total">
-                    <td>Total with taxes (21%)</td>
-                    <td>{{ totalTaxes() }} €</td>
-                    <td class="formula">( ( taxes * dinner ) / 100 ) + dinner</td>
-                </tr>
-                <tr class="total">
-                    <td>Total with tip</td>
-                    <td>{{ totalTip() }} €</td>
-                    <td class="formula">Total with taxes + Total with tip</td>
-                </tr>
-                <tr class="total">
-                    <td>Total per person</td>
-                    <td>{{ totalPerson() }} €</td>
-                    <td class="formula">( Total with taxes + Total with tip ) * person</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+	<body>
+		<div id="app" v-cloak>
+			<h1 class="title">
+				Dinner calculator
+			</h1>
+			<table class="table">
+				<tbody class="table__body">
+					<tr class="table__row">
+						<th class="table__th">
+							Price
+						</th>
+						<td class="table__td table__td--numbers">
+							{{ price }}€
+						</td>
+						<td class="table__td">
+							<div class="list-buttons">
+								<button @click="increment('price')" class="list-buttons__item button button--add">
+									<i class="icon icon--white">
+										<svg class="icon__svg">
+											<use class="icon__use" xlink:href="#plus"></use>
+										</svg>
+									</i>
+								</button>
+								<button @click="decrement('price')" class="list-buttons__item button button--remove">
+									<i class="icon icon--white">
+										<svg class="icon__svg">
+											<use class="icon__use" xlink:href="#minus"></use>
+										</svg>
+									</i>
+								</button>
+							</div>
+						</td>
+					</tr>
+					<tr class="table__row">
+						<th class="table__th">
+							Persons
+						</th>
+						<td class="table__td table__td--numbers">
+							{{ persons }}
+						</td>
+						<td class="table__td">
+							<div class="list-buttons">
+								<button @click="increment('persons')" class="list-buttons__item button button--add">
+									<i class="icon icon--white">
+										<svg class="icon__svg">
+											<use class="icon__use" xlink:href="#plus"></use>
+										</svg>
+									</i>
+								</button>
+								<button @click="decrement('persons')" class="list-buttons__item button button--remove">
+									<i class="icon icon--white">
+										<svg class="icon__svg">
+											<use class="icon__use" xlink:href="#minus"></use>
+										</svg>
+									</i>
+								</button>
+							</div>
+						</td>
+					</tr>
+					<tr class="table__row">
+						<th class="table__th">
+							Taxes
+						</th>
+						<td class="table__td table__td--numbers">
+							{{ taxes }}%
+						</td>
+						<td class="table__td">
+							<div class="list-buttons">
+								<button @click="increment('taxes')" class="list-buttons__item button button--add">
+									<i class="icon icon--white">
+										<svg class="icon__svg">
+											<use class="icon__use" xlink:href="#plus"></use>
+										</svg>
+									</i>
+								</button>
+								<button @click="decrement('taxes')" class="list-buttons__item button button--remove">
+									<i class="icon icon--white">
+										<svg class="icon__svg">
+											<use class="icon__use" xlink:href="#minus"></use>
+										</svg>
+									</i>
+								</button>
+							</div>
+						</td>
+					</tr>
+					<tr class="table__row">
+						<th class="table__th">
+							Tips
+						</th>
+						<td class="table__td table__td--numbers">
+							{{ tips }}%
+						</td>
+						<td class="table__td">
+							<div class="list-buttons">
+								<button @click="increment('tips')" class="list-buttons__item button button--add">
+									<i class="icon icon--white">
+										<svg class="icon__svg">
+											<use class="icon__use" xlink:href="#plus"></use>
+										</svg>
+									</i>
+								</button>
+								<button @click="decrement('tips')" class="list-buttons__item button button--remove">
+									<i class="icon icon--white">
+										<svg class="icon__svg">
+											<use class="icon__use" xlink:href="#minus"></use>
+										</svg>
+									</i>
+								</button>
+							</div>
+						</td>
+					</tr>
+					<tr class="table__row table__row--calculate">
+						<th class="table__th">
+							Total per person<br>
+							<small>with taxes</small>
+						</th>
+						<td class="table__td table__td--numbers">
+							{{ totalTaxes().toFixed(2) }}€
+						</td>
+						<td class="table__td table__td--formula">
+							<code>(price * (taxes% / 100)) + price</code><br>
+                            <code>({{ price }}€ * {{ taxes / 100 }}) + {{ price }}€</code>
+						</td>
+					</tr>
+					<tr class="table__row table__row--calculate">
+						<th class="table__th">
+							Total of all persons<br>
+							<small>with taxes</small>
+						</th>
+						<td class="table__td table__td--numbers">
+							{{ totalPersons().toFixed(2) }}€
+						</td>
+						<td class="table__td table__td--formula">
+							<code>total dinner with taxes * persons</code><br>
+                            <code>{{ totalTaxes().toFixed(2) }}€ * {{persons}}</code>
+						</td>
+					</tr>
+					<tr class="table__row table__row--calculate">
+						<th class="table__th">
+							Total of all persons<br>
+							<small>with tips</small>
+						</th>
+						<td class="table__td table__td--numbers">
+							{{ totalTips().toFixed(2) }}€
+						</td>
+						<td class="table__td table__td--formula">
+							<code>(total dinners * (tips% / 100)) + total dinners</code><br>
+                            <code>({{ totalPersons().toFixed(2) }}€ * {{ tips / 100 }}) + {{ totalPersons().toFixed(2) }}€</code>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 
-    <script src="js/vue.js"></script>
-    <script src="js/app.js"></script>
-</body>
+		<script src="js/vue-2.6.10.js"></script>
+		<script src="js/app.js"></script>
+	</body>
 
 </html>
