@@ -59,19 +59,19 @@ Is developed with **[vue.js](https://vuejs.org/)** a Javascript framework. This 
 - Total of the dinner per person with taxes
 
 ```javascript
-result = (price * (taxes% / 100)) + price
+totalTaxes = (price * (taxes% / 100)) + price
 ```
 
 - Total of the dinner the all persons with taxes
 
 ```javascript
-result = totalTaxes * persons;
+totalPersons = totalTaxes() * persons
 ```
 
 - Total of the dinner the all persons with taxes and tips
 
 ```javascript
-result = (totalAllPerson * (tip% / 100)) + totalAllPerson;
+totalTips = (totalPersons() * (tips% / 100)) + totalPersons()
 ```
 
 ## Continue...
