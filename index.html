@@ -132,7 +132,8 @@
 							{{ totalTaxes().toFixed(2) }}€
 						</td>
 						<td class="table__td table__td--formula">
-							(price * (taxes% / 100)) + price
+							<code>(price * (taxes% / 100)) + price</code><br>
+                            <code>({{ price }}€ * {{ taxes / 100 }}) + {{ price }}€</code>
 						</td>
 					</tr>
 					<tr class="table__row table__row--calculate">
@@ -144,7 +145,8 @@
 							{{ totalPersons().toFixed(2) }}€
 						</td>
 						<td class="table__td table__td--formula">
-							total dinner with taxes * persons
+							<code>total dinner with taxes * persons</code><br>
+                            <code>{{ totalTaxes().toFixed(2) }}€ * {{persons}}</code>
 						</td>
 					</tr>
 					<tr class="table__row table__row--calculate">
@@ -156,7 +158,8 @@
 							{{ totalTips().toFixed(2) }}€
 						</td>
 						<td class="table__td table__td--formula">
-							(total dinners * (tip% / 100)) + total dinners
+							<code>(total dinners * (tips% / 100)) + total dinners</code><br>
+                            <code>({{ totalPersons().toFixed(2) }}€ * {{ tips / 100 }}) + {{ totalPersons().toFixed(2) }}€</code>
 						</td>
 					</tr>
 				</tbody>
