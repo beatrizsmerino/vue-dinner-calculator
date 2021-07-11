@@ -43,8 +43,8 @@ This project has 3 files:
 The scripts are loaded in the HTML like this:
 
 ```html
-<script src="js/vue.js"></script>
-<script src="js/app.js"></script>  
+<script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+<script defer src="js/app.js"></script>
 ```
 
 ## How it works
