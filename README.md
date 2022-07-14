@@ -1,8 +1,8 @@
+![GitHub last commit](https://img.shields.io/github/last-commit/beatrizsmerino/vue-dinner-calculator)  
 ![GitHub issues](https://img.shields.io/github/issues/beatrizsmerino/vue-dinner-calculator)
 ![GitHub forks](https://img.shields.io/github/forks/beatrizsmerino/vue-dinner-calculator)
 ![GitHub stars](https://img.shields.io/github/stars/beatrizsmerino/vue-dinner-calculator)
 ![GitHub watchers](https://img.shields.io/github/watchers/beatrizsmerino/vue-dinner-calculator)
-![GitHub last commit](https://img.shields.io/github/last-commit/beatrizsmerino/vue-dinner-calculator)
 
 # Vue Dinner Calculator
 
